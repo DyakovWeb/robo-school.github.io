@@ -1,0 +1,25 @@
+.form {
+    display: grid;
+    gap: 10px;
+}
+
+.form-input {
+    padding: 0 20px;
+    height: 64px;
+    border-radius: 5px;
+    color: $main-color;
+    transition: box-shadow 0.2s ease;
+
+    &::placeholder {
+        color: $placeholder;
+    }
+
+    &:focus {
+        box-shadow: -8px -6px 4px 0px rgba(0, 0, 0, 0.35);
+    }
+
+    /* Mobile */
+    @media (max-width: 767px) {
+       height: 60px;
+    }
+}

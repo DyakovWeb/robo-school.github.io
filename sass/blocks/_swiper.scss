@@ -1,0 +1,29 @@
+.swiper {
+    padding: 0 10px;
+}
+.swiper-slide {
+    width: 360px !important;
+    height: unset !important;
+    min-height: 100% !important;
+    display: flex !important;
+    /* Mobile */
+    @media (max-width: 767px) {
+       width: 220px !important;
+
+    }
+}
+
+.swiper-scrollbar-drag {
+    background-color: $main-color;
+    /* Mobile */
+    @media (max-width: 767px) {
+        height: 3px;
+        top: 1px;
+    }
+}
+
+.smooth-transition {
+    -webkit-transition-timing-function: linear !important;
+    -o-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
+}

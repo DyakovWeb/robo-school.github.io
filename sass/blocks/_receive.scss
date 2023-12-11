@@ -1,0 +1,145 @@
+.receive {
+    padding: 100px 0;
+    background-color: $background-receive;
+
+    /* Desktop small */
+    @media (max-width: 1199px) {
+       padding: 80px 0;
+    }
+
+    /* Tablet */
+    @media (max-width: 1023px) {
+       padding: 60px 0;
+    }
+
+    /* Mobile */
+    @media (max-width: 767px) {
+       padding-top: 40px;
+       padding-bottom: 52px;
+    }
+}
+
+.receive__title {
+    margin-bottom: 60px;
+
+    /* Tablet */
+    @media (max-width: 1023px) {
+       text-align: center;
+       margin-bottom: 50px;
+    }
+
+    /* Mobile */
+    @media (max-width: 767px) {
+       margin-bottom: 40px;
+    }
+}
+
+.receive__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 360px);
+    gap: 40px;
+
+    /* Desktop small */
+    @media (max-width: 1199px) {
+       justify-items: center;
+       text-align: center;
+       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    /* Tablet */
+    @media (max-width: 1023px) {
+        gap: 30px;
+    }
+}
+
+.receive-item {
+    position: relative;
+    p {
+        color: $main-color-opacity;
+    }
+
+    .heading-4 {
+        margin-bottom: 20px;
+    }
+
+    /* Desktop small */
+    @media (max-width: 1199px) {
+       br {
+        display: none;
+       }
+    }
+    /* Mobile */
+    @media (max-width: 767px) {
+        font-size: 16px;
+        p {
+            max-width: 300px;
+        }
+        .heading-4 {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.receive-info {
+    position: absolute;
+    padding: 0 20px;
+    height: 56px;
+    line-height: 56px;
+    border-radius: 5px;
+    top: -66px;
+    right: -6px;
+    background-color: $white;
+    box-shadow: 0px 2px 8px 0px rgba(20, 16, 36, 0.10);
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+
+    &--active {
+        opacity: 1;
+    }
+
+    span {
+        font-size: 16px;
+    }
+
+    /* Mobile */
+    @media (max-width: 767px) {
+        height: 52px;
+        line-height: 52px;
+        top: -62px;
+        right: 50%;
+        transform: translateX(50%);
+        
+        span {
+            font-size: 14px;
+        }
+    }
+}
+
+.receive-item__wrapper {
+    display: flex;
+    column-gap: 10px;
+
+    /* Desktop small */
+    @media (max-width: 1199px) {
+       justify-content: center;
+    }
+
+    /* Mobile */
+    @media (max-width: 767px) {
+       padding-left: 33px;
+    }
+}
+
+.receive-button-info {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: $button-info;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+        background-color: rgba(20, 16, 36, 0.15);;
+    }
+}

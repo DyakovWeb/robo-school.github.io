@@ -1,0 +1,143 @@
+.tab__nav {
+    padding-bottom: 20px;
+    display: flex;
+    gap: 180px;
+    border-bottom: 1px solid rgba(20, 16, 36, 0.11);
+    
+    /* Mobile */
+    @media (max-width: 767px) {
+       display: none;
+    }
+}
+
+.tab__nav-button {
+    white-space: nowrap;
+    color: $main-color;
+    transition: color 0.2s ease;
+
+    &--active {
+        color: $accent-color;
+    }
+
+    &--absent {
+        color: rgba(20, 16, 36, 0.2);
+        pointer-events: none;
+    }
+
+    &:hover {
+        color: $accent-color;
+    }
+}
+
+.tab__nav-mobile {
+    display: none;
+
+    /* Mobile */
+    @media (max-width: 767px) {
+       display: block;
+    }
+}
+
+.tab__nav-button-mobile {
+    display: none;
+    transition: background-color 0.2s ease;
+
+    /* Mobile */
+    @media (max-width: 767px) {
+       display: block;
+       padding: 0 75px;
+       width: 260px;
+       height: 46px;
+       line-height: 46px;
+       white-space: nowrap;
+       font-size: 16px;
+       background-color: $accent-color;
+       color: $white;
+
+       span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        gap: 5px;
+       }
+    }
+
+    &:focus {
+        background-color:#98161a;
+    }
+}
+
+.tab__content {
+    padding-top: 20px;
+    &--mobile {
+        display: none;
+    }
+
+    /* Mobile */
+    @media (max-width: 767px) {
+       &--mobile {
+        display: block;
+       }
+
+       &--desktop {
+        display: none;
+       }
+    }
+}
+
+.tab__block {
+    display: none;
+    max-height: 354px;
+    overflow-y: scroll;
+
+    &--active {
+        display: block;
+    }
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        border-radius: 40px;
+        background-color: rgba(20, 16, 36, 0.08);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 40px;
+        background-color: $main-color;
+    }
+
+    & > *:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Mobile */
+    @media (max-width: 767px) {
+       max-height: 254px;
+
+       &::-webkit-scrollbar {
+        width: 3px;
+       }
+    }
+}
+
+.tab__block-list {
+    margin-bottom: 40px;
+
+    /* Mobile */
+    @media (max-width: 767px) {
+       margin-bottom: 20px;
+    }
+}
+
+.tab__title {
+    margin-bottom: 20px;
+
+    /* Mobile */
+    @media (max-width: 767px) {
+       margin-bottom: 10px;
+
+       .heading-4 {
+        font-size: 16px;
+       }
+    }
+}
